@@ -1,0 +1,57 @@
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.6rem;
+  font-family: Verdana, sans-serif;
+}
+
+.container {
+  width: 280px;
+  margin: 30px auto;
+}
+
+form {
+  text-align: center;
+}
+
+form p:not(.center) {
+  text-align: right;
+}
+
+input[type=text],
+input[type=password] {
+  padding: 5px;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.btn {
+  width: 100px;
+  padding: 7px;
+  border-radius: 5px;
+  color: #fff;
+  background: hsl(0,100%,50%);
+  box-shadow: 0 3px 0 hsl(0,100%,34%);
+  cursor: pointer;
+  margin: 0 auto 15px;
+  user-select: none;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+.btn:active {
+  box-shadow: none;
+}
+
+.fs12 {
+  font-size: 1.2rem;
+}
+
+.err {
+  color: tomato;
+  font-weight: bold;
+  font-size: 1.3rem;
+}
