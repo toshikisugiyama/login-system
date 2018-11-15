@@ -26,10 +26,10 @@ require_once(__DIR__.'/../config/config.php');
       </p>
       <p>
         <label for="password">パスワード</label>
-        <input type="password" id="password" name="password" placeholder="pasword">
+        <input type="password" id="password" name="password" placeholder="password">
       </p>
       <div class="btn">Log In</div><!-- /btn -->
-      <p class="center"><a class="fs12" href="/signup.php">Sign Up</a></p>
+      <p class="center fs12"><a href="/signup.php">Sign Up</a></p>
     </form>
   </div><!-- /container -->
 

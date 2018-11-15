@@ -54,4 +54,5 @@ input[type=password] {
   color: tomato;
   font-weight: bold;
   font-size: 1.3rem;
+  text-align: center;
 }

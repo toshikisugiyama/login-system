@@ -22,16 +22,16 @@ $app->run();
     <form action="" method="post" id="signup">
       <p>
         <label for="email">メール</label>
-        <input type="text" id="email" name="email" placeholder="email">
+        <input type="text" id="email" name="email" placeholder="email" value="<?= isset($app->getValues()->email) ? h($app->getValues()->email) : ''; ?>">
       </p>
-      <p class="err"><?= h($app->getErrors('email')); ?></p>
+      <p class="err center"><?= h($app->getErrors('email')); ?></p>
       <p>
         <label for="password">パスワード</label>
-        <input type="password" id="password" name="password" placeholder="pasword">
+        <input type="password" id="password" name="password" placeholder="password">
       </p>
-      <p class="err><?= h($app->getErrors('password')); ?></p>
+      <p class="err center"><?= h($app->getErrors('password')); ?></p>
       <div class="btn" onclick="document.getElementById('signup').submit();">Sign Up</div><!-- /btn -->
-      <p class="center"><a class="fs12" href="/login.php">Log In</a></p>
+      <p class="fs12 center"><a href="/login.php">Log In</a></p>
     </form>
   </div><!-- /container -->
 
