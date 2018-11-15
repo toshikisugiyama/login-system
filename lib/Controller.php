@@ -1,6 +1,6 @@
 <?php
 
-namespase MyApp;
+namespace MyApp;
 
 class Controller {
   protected function isLoggedIn(){
