@@ -32,6 +32,7 @@ $app->run();
       <p class="err center"><?= h($app->getErrors('password')); ?></p>
       <div class="btn" onclick="document.getElementById('signup').submit();">Sign Up</div><!-- /btn -->
       <p class="fs12 center"><a href="/login.php">Log In</a></p>
+      <input type="hidden" name="token" value="<?= h($_SESSION['token']); ?>">
     </form>
   </div><!-- /container -->
 
