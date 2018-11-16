@@ -4,9 +4,9 @@
 
 require_once(__DIR__.'/../config/config.php');
 
-// $app = new MyApp\Controller\Login();
+$app = new MyApp\Controller\Login();
 
-// $app->run();
+$app->run();
 
 ?>
 
@@ -19,17 +19,19 @@ require_once(__DIR__.'/../config/config.php');
 </head>
 <body>
   <div class="container">
-    <form action="" method="post">
+    <form action="" method="post" id="login">
       <p>
         <label for="email">メール</label>
-        <input type="text" id="email" name="email" placeholder="email">
+        <input type="text" id="email" name="email" placeholder="email" value="<?= isset($app->getValues()->email) ? h($app->getValues()->email) : ''; ?>">
       </p>
       <p>
         <label for="password">パスワード</label>
         <input type="password" id="password" name="password" placeholder="password">
       </p>
-      <div class="btn">Log In</div><!-- /btn -->
+      <p class="err center"><?= h($app->getErrors('login')); ?></p>
+      <div class="btn" onclick="document.getElementById('login').submit();">Log In</div><!-- /btn -->
       <p class="center fs12"><a href="/signup.php">Sign Up</a></p>
+      <input type="hidden" name="token" value="<?= h($_SESSION['token']); ?>">
     </form>
   </div><!-- /container -->
 
